@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#0f172a" />
+  <title>Roteiro Prático — Sistema Muscular</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topo">
+  <div>
+    <h1>Roteiro Prático — Sistema Muscular</h1>
+    <p>Educação Física | Membro Superior e Membro Inferior</p>
+  </div>
+  <div class="acoes-topo">
+    <button id="btnPrint">📄 Gerar PDF / Imprimir</button>
+    <button id="btnGabarito">🔒 Gabarito</button>
+  </div>
+</header>
+
+<main>
+  <section class="painel intro">
+    <h2>Como usar em aula prática</h2>
+    <p>
+      O aluno deve localizar o músculo na peça anatômica, modelo, imagem ou colega voluntário,
+      registrar fotos, responder à pergunta clínica e relacionar a estrutura com movimento,
+      postura, estabilização articular ou lesão.
+    </p>
+    <div class="grid-info">
+      <span>✅ 25 músculos do membro superior</span>
+      <span>✅ 25 músculos do membro inferior</span>
+      <span>✅ Fotos livres por estrutura</span>
+      <span>✅ Gabarito com senha</span>
+    </div>
+  </section>
+
+  <nav class="tabs">
+    <button class="tab ativo" data-alvo="superior">Membro Superior</button>
+    <button class="tab" data-alvo="inferior">Membro Inferior</button>
+  </nav>
+
+  <section id="superior" class="lista ativo"></section>
+  <section id="inferior" class="lista"></section>
+</main>
+
+<div id="modalGabarito" class="modal oculto">
+  <div class="modal-card">
+    <button class="fechar" id="fecharModal">×</button>
+    <h2>🔒 Área da Professora</h2>
+    <p>Digite a senha para liberar o gabarito.</p>
+    <input id="senha" type="password" inputmode="numeric" placeholder="Código de acesso">
+    <button id="liberar">Liberar gabarito</button>
+    <div id="gabaritoConteudo" class="gabarito oculto"></div>
+  </div>
+</div>
+
+<footer>
+  <p>Desenvolvido para aula prática de Anatomia Humana aplicada à Educação Física.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
